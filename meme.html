@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Gallery - $ucky Panther</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Check out $ucky Panther's meme gallery - The wildest memes in the Solana ecosystem!">
+    <meta property="og:title" content="Meme Gallery - $ucky Panther">
+    <meta property="og:description" content="Check out $ucky Panther's meme gallery - The wildest memes in the Solana ecosystem!">
+    <meta property="og:image" content="images/suckypanther_Logo-removebg-preview.png">
+</head>
+<body>
+    <div id="header"></div>
+
+    <main class="page-content meme-page">
+        <h2>Meme Gallery</h2>
+        <div class="meme-grid">
+            <div class="meme-card" data-delay="0">
+                <img src="meme/Meme1.jpg" alt="Meme 1" class="meme-thumbnail">
+            </div>
+            <div class="meme-card" data-delay="100">
+                <img src="meme/Meme 2.jpg" alt="Meme 2" class="meme-thumbnail">
+            </div>
+            <div class="meme-card" data-delay="200">
+                <img src="meme/Meme 3.jpg" alt="Meme 3" class="meme-thumbnail">
+            </div>
+        </div>
+
+        <!-- Image Viewer -->
+        <div id="image-viewer" class="image-viewer-overlay">
+            <img src="" alt="Enlarged meme" class="enlarged-image">
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header', 'components/header.html');
+            loadComponent('footer', 'components/footer.html');
+
+            // Image viewer functionality
+            const memeCards = document.querySelectorAll('.meme-thumbnail');
+            const imageViewer = document.getElementById('image-viewer');
+            const enlargedImage = imageViewer.querySelector('.enlarged-image');
+
+            memeCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    enlargedImage.src = card.src;
+                    imageViewer.classList.add('active');
+                });
+            });
+
+            imageViewer.addEventListener('click', (e) => {
+                if (e.target === imageViewer) {
+                    imageViewer.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
