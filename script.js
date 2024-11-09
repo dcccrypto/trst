@@ -23,10 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add active state to current page nav link
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
+        const linkPath = link.getAttribute('href');
+        if (currentPath === linkPath || 
+            (currentPath === '/' && linkPath === '/') || 
+            (currentPath.endsWith(linkPath) && linkPath !== '/')) {
             link.classList.add('active');
         }
     });
@@ -43,4 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 2000);
         });
     };
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && 
+            !e.target.closest('.nav-links') && 
+            !e.target.closest('.mobile-menu-toggle')) {
+            navLinks.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
 });
