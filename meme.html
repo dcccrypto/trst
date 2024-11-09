@@ -6,7 +6,7 @@
     <title>Meme Gallery - $ucky Panther</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous" defer></script>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Check out $ucky Panther's meme gallery - The wildest memes in the Solana ecosystem!">
     <meta property="og:title" content="Meme Gallery - $ucky Panther">
@@ -14,7 +14,49 @@
     <meta property="og:image" content="images/suckypanther_Logo-removebg-preview.png">
 </head>
 <body>
-    <div id="header"></div>
+    <header role="banner">
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker-item">Contract: Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</div>
+                <div class="ticker-item">Liquidity 100% Burned</div>
+                <div class="ticker-item">Total Supply: 949,578,250</div>
+                <div class="ticker-item">$uckyP</div>
+                <div class="ticker-item">pump.funlaunch</div>
+                <div class="ticker-item">Contract: Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</div>
+                <div class="ticker-item">Liquidity 100% Burned</div>
+                <div class="ticker-item">Total Supply: 949,578,250</div>
+                <div class="ticker-item">$uckyP</div>
+                <div class="ticker-item">pump.fun Launch</div>
+            </div>
+        </div>
+
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-left">
+                <div class="logo">$uckyP</div>
+                <div class="nav-social-links">
+                    <a href="https://x.com/SuckySOLPanther" target="_blank" class="nav-social-btn twitter">
+                        <img src="images/logo-white.png" alt="Twitter" class="nav-social-icon">
+                    </a>
+                    <a href="https://t.me/sukypantherportal" target="_blank" class="nav-social-btn telegram">
+                        <img src="images/telegram-removebg-preview.png" alt="Telegram" class="nav-social-icon">
+                    </a>
+                    <a href="https://tiktok.com/graspingcrypto" target="_blank" class="nav-social-btn tiktok">
+                        <img src="images/tiktok.png" alt="TikTok" class="nav-social-icon">
+                    </a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="meme.html" class="nav-link">Meme</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </nav>
+    </header>
 
     <main class="page-content meme-page">
         <h2>Meme Gallery</h2>
@@ -30,38 +72,26 @@
             </div>
         </div>
 
-        <!-- Image Viewer -->
         <div id="image-viewer" class="image-viewer-overlay">
             <img src="" alt="Enlarged meme" class="enlarged-image">
         </div>
     </main>
 
-    <div id="footer"></div>
+    <footer class="contact" role="contentinfo">
+        <h2>Join the Jungle</h2>
+        <div class="social-links">
+            <a href="https://x.com/SuckySOLPanther" target="_blank" class="social-btn twitter">
+                <img src="images/logo-white.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://t.me/sukypantherportal" target="_blank" class="social-btn telegram">
+                <img src="images/telegram-removebg-preview.png" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://tiktok.com/graspingcrypto" target="_blank" class="social-btn tiktok">
+                <img src="images/tiktok.png" alt="TikTok" class="social-icon">
+            </a>
+        </div>
+    </footer>
 
-    <script src="js/components.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            loadComponent('header', 'components/header.html');
-            loadComponent('footer', 'components/footer.html');
-
-            // Image viewer functionality
-            const memeCards = document.querySelectorAll('.meme-thumbnail');
-            const imageViewer = document.getElementById('image-viewer');
-            const enlargedImage = imageViewer.querySelector('.enlarged-image');
-
-            memeCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    enlargedImage.src = card.src;
-                    imageViewer.classList.add('active');
-                });
-            });
-
-            imageViewer.addEventListener('click', (e) => {
-                if (e.target === imageViewer) {
-                    imageViewer.classList.remove('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html> 

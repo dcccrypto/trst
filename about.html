@@ -6,7 +6,7 @@
     <title>About - $ucky Panther</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous" defer></script>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Learn about $ucky Panther - Join our community on Solana for exclusive rewards, memes, and massive gains.">
     <meta property="og:title" content="About - $ucky Panther">
@@ -14,25 +14,58 @@
     <meta property="og:image" content="images/suckypanther_Logo-removebg-preview.png">
 </head>
 <body>
-    <div id="header"></div>
+    <!-- Header -->
+    <header role="banner">
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <!-- First set -->
+                <div class="ticker-item">Contract: Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</div>
+                <div class="ticker-item">Liquidity 100% Burned</div>
+                <div class="ticker-item">Total Supply: 949,578,250</div>
+                <div class="ticker-item">$uckyP</div>
+                <div class="ticker-item">pump.funlaunch</div>
+                <!-- Second set -->
+                <div class="ticker-item">Contract: Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</div>
+                <div class="ticker-item">Liquidity 100% Burned</div>
+                <div class="ticker-item">Total Supply: 949,578,250</div>
+                <div class="ticker-item">$uckyP</div>
+                <div class="ticker-item">pump.fun Launch</div>
+            </div>
+        </div>
+
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-left">
+                <div class="logo" role="banner">$uckyP</div>
+                <div class="nav-social-links">
+                    <a href="https://x.com/SuckySOLPanther" target="_blank" class="nav-social-btn twitter">
+                        <img src="images/logo-white.png" alt="Twitter" class="nav-social-icon">
+                    </a>
+                    <a href="https://t.me/sukypantherportal" target="_blank" class="nav-social-btn telegram">
+                        <img src="images/telegram-removebg-preview.png" alt="Telegram" class="nav-social-icon">
+                    </a>
+                    <a href="https://tiktok.com/graspingcrypto" target="_blank" class="nav-social-btn tiktok">
+                        <img src="images/tiktok.png" alt="TikTok" class="nav-social-icon">
+                    </a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links" role="menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="meme.html" class="nav-link">Meme</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </nav>
+    </header>
 
     <main class="page-content about-page">
         <div class="about-grid">
             <div class="about-card" data-delay="0">
                 <i class="fas fa-rocket"></i>
-                <h3>🚀 Join the Meteoric Ascent!</h3>
-                <p>Get ready to HODL tight because this launched gem token is on a wild ride to the moon—and we're inviting you to be part of the journey! Tokens will drop at major milestones for our dedicated long-term holders who are here for the ride. No JETTING allowed here—this is for the true believers!</p>
-            </div>
-            
-            <div class="about-card" data-delay="100">
-                <i class="fas fa-paint-brush"></i>
-                <h3>🎨 Exclusive Sucky Panther Tattoo Designs</h3>
-                <p>For our loyal community, we're releasing FREE custom tattoo designs, so you can sport the Sucky Panther with pride (and maybe some ink)! Why just watch the trend when you can wear it?</p>
-            </div>
-            
-            <div class="about-card" data-delay="200">
-                <i class="fas fa-code"></i>
-                <h3>🔥 The Devs Who Won't Rest Until Sucky Panther Roars!</h3>
+                <h3>🌟 Welcome to the $ucky Side!</h3>
                 <p>Our development team has never been this passionate, with a commitment to push this project to the heights it deserves—and beyond! We're working relentlessly to bring you an experience, community, and brand that stands out in the crypto world.</p>
             </div>
             
@@ -45,14 +78,22 @@
         </div>
     </main>
 
-    <div id="footer"></div>
+    <!-- Footer -->
+    <footer class="contact" role="contentinfo">
+        <h2>Join the Jungle</h2>
+        <div class="social-links">
+            <a href="https://x.com/SuckySOLPanther" target="_blank" class="social-btn twitter">
+                <img src="images/logo-white.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://t.me/sukypantherportal" target="_blank" class="social-btn telegram">
+                <img src="images/telegram-removebg-preview.png" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://tiktok.com/graspingcrypto" target="_blank" class="social-btn tiktok">
+                <img src="images/tiktok.png" alt="TikTok" class="social-icon">
+            </a>
+        </div>
+    </footer>
 
-    <script src="js/components.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            loadComponent('header', 'components/header.html');
-            loadComponent('footer', 'components/footer.html');
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html> 

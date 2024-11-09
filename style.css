@@ -110,8 +110,43 @@ html {
 .navbar {
     position: fixed;
     top: 40px;
+    left: 0;
+    right: 0;
     width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
     z-index: 1000;
+    height: 80px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-social-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 /* Update any other fixed/absolute positioned elements */
@@ -124,19 +159,6 @@ html {
 }
 
 /* Navbar Styles */
-.navbar {
-    position: fixed;
-    width: 100%;
-    padding: 1.5rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(10, 10, 10, 0.95);
-    border-bottom: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
 .logo {
     font-size: 2rem;
     font-weight: 700;
@@ -1714,8 +1736,8 @@ html {
 
 /* Update page content spacing */
 .page-content {
-    padding-top: calc(40px + 80px); /* ticker height + navbar height */
-    min-height: calc(100vh - 200px); /* Ensure footer stays at bottom */
+    padding-top: 120px;
+    min-height: calc(100vh - 120px);
 }
 
 /* Add these styles */
