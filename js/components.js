@@ -22,13 +22,14 @@ async function loadComponent(elementId, componentPath) {
     try {
         console.log(`Loading component: ${componentPath}`); // Debug log
         
-        // Add cache-busting parameter for development
-        const url = `${componentPath}?v=${new Date().getTime()}`;
+        // Add cache-busting parameter and handle CORS
+        const url = `${window.location.origin}/${componentPath}?v=${new Date().getTime()}`;
         const response = await fetch(url, {
             headers: {
                 'Accept': 'text/html',
                 'Cache-Control': 'no-cache'
-            }
+            },
+            credentials: 'same-origin'
         });
         
         if (!response.ok) {
