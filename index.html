@@ -45,8 +45,52 @@
     <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <!-- Main Content Structure with Semantic HTML -->
-    <header id="header" class="component-loading" role="banner"></header>
+    <!-- Replace component-loading div with actual header -->
+    <header role="banner">
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <!-- First set -->
+                <div class="ticker-item">Contract: Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</div>
+                <div class="ticker-item">Liquidity 100% Burned</div>
+                <div class="ticker-item">Total Supply: 949,578,250</div>
+                <div class="ticker-item">$uckyP</div>
+                <div class="ticker-item">pump.funlaunch</div>
+                <!-- Second set -->
+                <div class="ticker-item">Contract: Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</div>
+                <div class="ticker-item">Liquidity 100% Burned</div>
+                <div class="ticker-item">Total Supply: 949,578,250</div>
+                <div class="ticker-item">$uckyP</div>
+                <div class="ticker-item">pump.fun Launch</div>
+            </div>
+        </div>
+
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-left">
+                <div class="logo" role="banner">$uckyP</div>
+                <div class="nav-social-links">
+                    <a href="https://x.com/SuckySOLPanther" target="_blank" class="nav-social-btn twitter">
+                        <img src="images/logo-white.png" alt="Twitter" class="nav-social-icon">
+                    </a>
+                    <a href="https://t.me/sukypantherportal" target="_blank" class="nav-social-btn telegram">
+                        <img src="images/telegram-removebg-preview.png" alt="Telegram" class="nav-social-icon">
+                    </a>
+                    <a href="https://tiktok.com/graspingcrypto" target="_blank" class="nav-social-btn tiktok">
+                        <img src="images/tiktok.png" alt="TikTok" class="nav-social-icon">
+                    </a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links" role="menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="meme.html" class="nav-link">Meme</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </nav>
+    </header>
 
     <main role="main">
         <section id="hero" class="hero" aria-label="Welcome Section">
@@ -98,23 +142,23 @@
         </section>
     </main>
 
-    <footer id="footer" class="component-loading" role="contentinfo"></footer>
+    <!-- Replace component-loading div with actual footer -->
+    <footer class="contact" role="contentinfo">
+        <h2>Join the Jungle</h2>
+        <div class="social-links">
+            <a href="https://x.com/SuckySOLPanther" target="_blank" class="social-btn twitter">
+                <img src="images/logo-white.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://t.me/sukypantherportal" target="_blank" class="social-btn telegram">
+                <img src="images/telegram-removebg-preview.png" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://tiktok.com/graspingcrypto" target="_blank" class="social-btn tiktok">
+                <img src="images/tiktok.png" alt="TikTok" class="social-icon">
+            </a>
+        </div>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="js/components.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('header').classList.add('component-loading');
-            document.getElementById('footer').classList.add('component-loading');
-            
-            Promise.all([
-                loadComponent('header', 'components/header.html'),
-                loadComponent('footer', 'components/footer.html')
-            ]).catch(error => {
-                console.error('Error loading components:', error);
-            });
-        });
-    </script>
+    <!-- Remove components.js and only keep necessary scripts -->
     <script src="script.js" defer></script>
 </body>
 </html>
