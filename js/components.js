@@ -9,8 +9,32 @@ function handleScriptError(error) {
     `;
 }
 
+// Add structured data for SEO
+function addStructuredData() {
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "$ucky Panther",
+        "alternateName": "$uckyP",
+        "url": "https://yourwebsite.com",
+        "logo": "https://yourwebsite.com/images/suckypanther_Logo-removebg-preview.png",
+        "sameAs": [
+            "https://x.com/SuckySOLPanther",
+            "https://t.me/sukypantherportal",
+            "https://tiktok.com/graspingcrypto"
+        ],
+        "description": "Join the $ucky Panther ($uckyP) community on Solana blockchain. Exclusive rewards, viral memes, massive gains potential."
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+}
+
 // Update script loading
 document.addEventListener('DOMContentLoaded', function() {
+    addStructuredData();
     Promise.all([
         loadComponent('header', 'components/header.html'),
         loadComponent('footer', 'components/footer.html')
@@ -22,14 +46,14 @@ async function loadComponent(elementId, componentPath) {
     try {
         console.log(`Loading component: ${componentPath}`); // Debug log
         
-        // Add cache-busting parameter and handle CORS
-        const url = `${window.location.origin}/${componentPath}?v=${new Date().getTime()}`;
+        // Remove window.location.origin from URL construction since componentPath is relative
+        const url = `${componentPath}?v=${new Date().getTime()}`;
         const response = await fetch(url, {
             headers: {
                 'Accept': 'text/html',
                 'Cache-Control': 'no-cache'
-            },
-            credentials: 'same-origin'
+            }
+            // Remove credentials since we're loading local files
         });
         
         if (!response.ok) {
@@ -43,6 +67,8 @@ async function loadComponent(elementId, componentPath) {
             throw new Error(`Element with id "${elementId}" not found`);
         }
         
+        // Remove component-loading class before setting innerHTML
+        targetElement.classList.remove('component-loading');
         targetElement.innerHTML = html;
         
         // Reinitialize any necessary JavaScript for the component
@@ -55,9 +81,10 @@ async function loadComponent(elementId, componentPath) {
         console.log(`Successfully loaded component: ${componentPath}`); // Debug log
     } catch (error) {
         console.error(`Error loading component: ${componentPath}`, error);
-        // Show error in the UI for better debugging
+        // Show error in the UI and remove loading state
         const targetElement = document.getElementById(elementId);
         if (targetElement) {
+            targetElement.classList.remove('component-loading');
             if (elementId === 'header') {
                 targetElement.innerHTML = `
                     <nav class="navbar">

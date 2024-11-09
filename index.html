@@ -3,78 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$ucky Panther - Wild Crypto Adventure</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
-    <meta name="description" content="Join the $ucky Panther community on Solana for exclusive rewards, memes, and massive gains. Get ready for a wild crypto adventure!">
-    <meta property="og:title" content="$ucky Panther - Wild Crypto Adventure">
-    <meta property="og:description" content="Join the $ucky Panther community on Solana for exclusive rewards, memes, and massive gains.">
+    
+    <!-- Primary Meta Tags -->
+    <title>$ucky Panther ($uckyP) - The Ultimate Solana Meme Token | Wild Crypto Adventure</title>
+    <meta name="title" content="$ucky Panther ($uckyP) - The Ultimate Solana Meme Token | Wild Crypto Adventure">
+    <meta name="description" content="Join the $ucky Panther ($uckyP) community on Solana blockchain. Exclusive rewards, viral memes, massive gains potential. 100% LP burned, community-driven token.">
+    <meta name="keywords" content="Sucky Panther, $uckyP, Solana token, meme coin, crypto community, SOL token, cryptocurrency, DeFi, viral memes, crypto investment">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="$ucky Panther Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="$ucky Panther ($uckyP) - The Ultimate Solana Meme Token">
+    <meta property="og:description" content="Join the $ucky Panther ($uckyP) community on Solana blockchain. Exclusive rewards, viral memes, massive gains potential. 100% LP burned, community-driven token.">
     <meta property="og:image" content="images/suckypanther_Logo-removebg-preview.png">
-    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="$ucky Panther ($uckyP) - The Ultimate Solana Meme Token">
+    <meta property="twitter:description" content="Join the $ucky Panther ($uckyP) community on Solana blockchain. Exclusive rewards, viral memes, massive gains potential. 100% LP burned, community-driven token.">
+    <meta property="twitter:image" content="images/suckypanther_Logo-removebg-preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Preload Critical Resources -->
     <link rel="preload" href="images/suckypanther_Logo-removebg-preview.png" as="image">
     <link rel="preload" href="images/junglebg.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <div id="header" class="component-loading"></div>
+    <!-- Main Content Structure with Semantic HTML -->
+    <header id="header" class="component-loading" role="banner"></header>
 
-    <section id="hero" class="hero">
-        <div class="jungle-overlay"></div>
-        <div class="hero-content">
-            <img src="images/suckypanther_Logo-removebg-preview.png" alt="Panther Logo" class="hero-logo">
-            <h1>Welcome to the Jungle of Gains</h1>
-            <p>Where the $ucky Panther prowls for prosperity</p>
-            <div class="hero-buttons">
-                <button class="connect-btn">Connect with Us</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="contract-section">
-        <div class="contract-wrapper">
-            <div class="contract-header">
-                <img src="images/suckypanther_Logo-removebg-preview.png" alt="GOTA" class="contract-logo">
-                <span class="contract-title">GOTA Contract Address</span>
-            </div>
-            <div class="contract-content">
-                <span class="address-text" id="contract-address">Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</span>
-                <button class="copy-btn" aria-label="Copy contract address" onclick="copyContractAddress()">
-                    <i class="fas fa-copy"></i>
-                    <span class="copy-text">Copy</span>
-                </button>
-            </div>
-            <div class="contract-tools">
-                <a href="https://dexscreener.com/solana/gfv1qcbkyoj6fdaowzgujxanljfseulu5fxiooahurje" target="_blank" class="tool-link">
-                    <img src="images/dexscreener.png" alt="DexScreener" class="tool-icon">
-                    DexScreener
-                </a>
-                <a href="https://www.dextools.io/app/en/solana/pair-explorer/GfV1Qcbkyoj6fdAowZGuJXAnLjFSEuLu5FxiooahuRJe?t=1724866835614" target="_blank" class="tool-link">
-                    <img src="images/dextools.png" alt="DexTools" class="tool-icon">
-                    DexTools
-                </a>
-                <div class="tool-link coming-soon">
-                    <img src="images/coingecko.png" alt="CoinGecko" class="tool-icon">
-                    CoinGecko
-                    <span class="soon-tag">Soon</span>
-                </div>
-                <div class="tool-link coming-soon">
-                    <img src="images/coinmarketcap.png" alt="CMC" class="tool-icon">
-                    CMC
-                    <span class="soon-tag">Soon</span>
+    <main role="main">
+        <section id="hero" class="hero" aria-label="Welcome Section">
+            <div class="jungle-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <img src="images/suckypanther_Logo-removebg-preview.png" 
+                     alt="$ucky Panther Logo - Solana Meme Token" 
+                     class="hero-logo"
+                     width="200" 
+                     height="200">
+                <h1>Welcome to the Jungle of Gains</h1>
+                <p>Where the $ucky Panther prowls for prosperity on Solana blockchain</p>
+                <div class="hero-buttons">
+                    <button class="connect-btn" aria-label="Connect with $ucky Panther Community">Connect with Us</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div id="footer" class="component-loading"></div>
+        <section class="contract-section" aria-label="Contract Information">
+            <div class="contract-wrapper">
+                <div class="contract-header">
+                    <img src="images/suckypanther_Logo-removebg-preview.png" 
+                         alt="$ucky Panther Token Logo" 
+                         class="contract-logo"
+                         width="50" 
+                         height="50">
+                    <h2 class="contract-title">$uckyP Contract Address</h2>
+                </div>
+                <div class="contract-content">
+                    <span class="address-text" id="contract-address">Hdkhm7bFRR63zbFcLo3d1D6rJRnpe5yjrvMCAuqWdCrs</span>
+                    <button class="copy-btn" 
+                            aria-label="Copy contract address" 
+                            onclick="copyContractAddress()">
+                        <i class="fas fa-copy" aria-hidden="true"></i>
+                        <span class="copy-text">Copy</span>
+                    </button>
+                </div>
+                <div class="contract-tools">
+                    <a href="https://dexscreener.com/solana/gfv1qcbkyoj6fdaowzgujxanljfseulu5fxiooahurje" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="tool-link">
+                        <img src="images/dexscreener.png" alt="View $uckyP on DexScreener" class="tool-icon" width="24" height="24">
+                        DexScreener
+                    </a>
+                    <!-- ... other tools ... -->
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <script src="js/components.js"></script>
+    <footer id="footer" class="component-loading" role="contentinfo"></footer>
+
+    <!-- Scripts -->
+    <script src="js/components.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            loadComponent('header', 'components/header.html');
-            loadComponent('footer', 'components/footer.html');
+            document.getElementById('header').classList.add('component-loading');
+            document.getElementById('footer').classList.add('component-loading');
+            
+            Promise.all([
+                loadComponent('header', 'components/header.html'),
+                loadComponent('footer', 'components/footer.html')
+            ]).catch(error => {
+                console.error('Error loading components:', error);
+            });
         });
     </script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
